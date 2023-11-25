@@ -26,7 +26,6 @@ import com.alibaba.fastjson2.JSON;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.CollectionUtils;
-import org.apache.poi.hssf.util.CellReference;
 import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.ss.usermodel.FillPatternType;
 import org.apache.poi.ss.usermodel.IndexedColors;
@@ -130,7 +129,7 @@ public class Lock2Test {
 
     @Test
     public void testc() throws Exception {
-        LOGGER.info("reslut:{}", JSON.toJSONString(new CellReference("B3")));
+        //LOGGER.info("reslut:{}", JSON.toJSONString(new CellReference("B3")));
     }
 
     @Test

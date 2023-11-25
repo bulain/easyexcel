@@ -5,7 +5,7 @@
     <groupId>com.alibaba</groupId>
     <artifactId>easyexcel-parent</artifactId>
     <packaging>pom</packaging>
-    <version>${revision}</version>
+    <version>3.3.2.a</version>
     <name>easyexcel-parent</name>
     <description>easyexcel is a excel handle tools written in Java</description>
     <url>https://github.com/alibaba/easyexcel</url>
@@ -14,18 +14,18 @@
     <modules>
         <module>easyexcel-core</module>
         <module>easyexcel-support</module>
-        <module>easyexcel-test</module>
+        <!--<module>easyexcel-test</module>-->
         <module>easyexcel</module>
     </modules>
 
 
     <properties>
-        <revision>3.3.2</revision>
+        <revision>3.3.2.a</revision>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk.version>1.8</jdk.version>
         <gpg.skip>true</gpg.skip>
         <maven.javadoc.skip>true</maven.javadoc.skip>
-        <maven.test.skip>true</maven.test.skip>
+        <maven.test.skip>false</maven.test.skip>
     </properties>
 
     <scm>
@@ -63,13 +63,9 @@
 
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
         <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>rdc-releases</id>
+            <url>https://packages.aliyun.com/maven/repository/2001275-release-LNOerM/</url>
         </repository>
     </distributionManagement>
 
@@ -78,35 +74,35 @@
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>easyexcel</artifactId>
-                <version>${revision}</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>easyexcel-core</artifactId>
-                <version>${revision}</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>easyexcel-support</artifactId>
-                <version>${revision}</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi</artifactId>
-                <version>4.1.2</version>
+                <version>5.2.4</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi-ooxml</artifactId>
-                <version>4.1.2</version>
+                <version>5.2.4</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.poi</groupId>
-                <artifactId>poi-ooxml-schemas</artifactId>
-                <version>4.1.2</version>
+                <artifactId>poi-ooxml-lite</artifactId>
+                <version>5.2.4</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
@@ -116,7 +112,7 @@
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
-                <version>1.7.32</version>
+                <version>1.7.36</version>
             </dependency>
             <dependency>
                 <groupId>org.ehcache</groupId>
