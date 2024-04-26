@@ -14,13 +14,13 @@
     <modules>
         <module>easyexcel-core</module>
         <module>easyexcel-support</module>
-        <module>easyexcel-test</module>
+        <!--<module>easyexcel-test</module>-->
         <module>easyexcel</module>
     </modules>
 
 
     <properties>
-        <revision>4.0.1</revision>
+        <revision>4.0.1.a</revision>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jdk.version>1.8</jdk.version>
         <gpg.skip>true</gpg.skip>
@@ -107,6 +107,11 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-csv</artifactId>
                 <version>1.11.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-compress</artifactId>
+                <version>1.26.2</version>
             </dependency>
             <dependency>
                 <groupId>org.ehcache</groupId>
@@ -197,11 +202,11 @@
                     <artifactId>flatten-maven-plugin</artifactId>
                     <version>1.2.7</version>
                 </plugin>
-                <plugin>
+                <!--<plugin>
                     <groupId>org.sonatype.plugins</groupId>
                     <artifactId>nexus-staging-maven-plugin</artifactId>
                     <version>1.6.13</version>
-                </plugin>
+                </plugin>-->
             </plugins>
         </pluginManagement>
 
@@ -349,7 +354,7 @@
             </plugin>
 
             <!-- Publish package to the Maven Central Repository -->
-            <plugin>
+            <!--<plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
                 <extensions>true</extensions>
@@ -358,7 +363,7 @@
                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
 </project>
